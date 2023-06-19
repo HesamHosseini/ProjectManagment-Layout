@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Header.css">
+</head>
+
+<body id="page">
+    <aside>
+
+        <div class="topItems">
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo
+                    consequat.</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo
+                    consequat.</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo
+                    consequat.</p>
+            </div>
+            <div>
+                item2
+            </div>
+            <div>
+                item3
+            </div>
+        </div>
+        <div class="bottomItems">
+            <div>
+                item1
+            </div>
+            <div>
+                item2
+            </div>
+            <div>
+                item3
+            </div>
+        </div>
+    </aside>
+    <div class="content">
+        asdads
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                //this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                if (panel.style.height == "0px" || panel.style.height == "") {
+                    panel.style.height = "100px";
+                } else {
+                    console.log(panel.style.height)
+                    panel.style.height = "0px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-Thin.woff2);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-ExtraLight.woff2);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-SemiBold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-ExtraBold.woff2);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Estedad";
+  src: url(./Estedad-v7.3/Estedad-Black.woff2);
+  font-weight: 900;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page {
+  display: flex;
+  height: 100vh;
+
+  .mainHeader {
+    display: none;
+  }
+  .pageControl {
+    height: inherit !important;
+  }
+  aside {
+    //direction: ltr;
+    //justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.372);
+    //font-family: "Estedad" !important;
+    flex-direction: column;
+    width: 100px;
+    border: 1px solid red;
+    font-family: "Estedad";
+
+    .topItems {
+      @include flex-center();
+      flex-direction: column;
+    }
+    .bottomItems {
+      @include flex-center();
+      flex-direction: column;
+    }
+  }
+  .content {
+    flex: 1;
+  }
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.4s;
+  }
+
+  .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .panel {
+    transition: all 0.4s;
+    padding: 0 18px;
+    display: block;
+    height: 0px;
+    background-color: white;
+    overflow: hidden;
+  }
+}
